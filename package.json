@@ -1,0 +1,27 @@
+{
+  "name": "ncc_console",
+  "version": "1.0.0",
+  "description": "NCC Company CMS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/newchemical/NCC_Console.git"
+  },
+  "keywords": [
+    "NCC",
+    "CMS"
+  ],
+  "author": "Tayyab Nadeem <contact@tayyabnadeem.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/newchemical/NCC_Console/issues"
+  },
+  "homepage": "https://github.com/newchemical/NCC_Console#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "nodemon": "^3.0.1"
+  }
+}
