@@ -2,7 +2,7 @@ import Joi from "joi";
 
 const AuthController = {
   register(req, res, next) {
-    const registerUser = Joi.object({
+    const registerUserSchema = Joi.object({
       username: Joi.min(3).max(30).required(),
       name: Joi.string().min(3).max(40).required(),
       father_name: Joi.string().min(3).max(40).required(),
@@ -10,6 +10,12 @@ const AuthController = {
       email: Joi.string().email().required(),
       role: Joi.string().min(3).max(50).required(),
     });
+
+    const { error } = registerUserSchema.validate(req.body);
+
+    if (error) {
+      return next(error);
+    }
 
     return res.json({ msg: "API done Very Well" });
   },
